@@ -1,0 +1,8 @@
+src/
+.yarn
+.yarnrc.yml
+.prettierrc.js
+.gitignore
+tsconfig.json
+!dist/
+preview/

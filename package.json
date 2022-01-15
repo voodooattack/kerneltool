@@ -1,0 +1,69 @@
+{
+  "name": "kerneltool",
+  "version": "1.0.0",
+  "description": "A cli to install ubuntu mainline kernels from the console.",
+  "main": "./index.js",
+  "bin": "./dist/cli.js",
+  "type": "module",
+  "engines": {
+    "node": ">= v16.13.2"
+  },
+  "os": [
+    "linux"
+  ],
+  "readme": "README.md",
+  "scripts": {
+    "build": "yarn exec tsc",
+    "watch": "yarn exec tsc --watch",
+    "start": "node -r source-map-support/register dist/cli.js",
+    "test": "echo \"Error: no tests implemented yet\" && exit 0",
+    "prettier": "prettier --fix -w src",
+    "postinstall": "husky install",
+    "prepublishOnly": "yarn build && pinst --disable",
+    "postpublish": "pinst --enable"
+  },
+  "author": "Abdullah Ali",
+  "license": "MIT",
+  "dependencies": {
+    "apt-parser": "^1.0.2",
+    "cacache": "^15.3.0",
+    "chalk": "^5.0.0",
+    "cli-table": "^0.3.11",
+    "clipanion": "^3.2.0-rc.5",
+    "dayjs": "^1.10.7",
+    "enquirer": "^2.3.6",
+    "env-paths": "^2.2.1",
+    "envfile": "^6.17.0",
+    "filesize": "^8.0.6",
+    "is-root": "^3.0.0",
+    "listr2": "^4.0.1",
+    "moize": "^6.1.0",
+    "node-fetch": "3.1.1",
+    "node-html-parser": "^5.2.0",
+    "promise-sequential": "^1.1.1",
+    "semver": "^7.3.5",
+    "semver-compare": "^1.0.0",
+    "tslib": "^2.3.1",
+    "unicode-progress": "^1.0.0",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/cacache": "^15",
+    "@types/cli-table": "^0",
+    "@types/node": "^17.0.10",
+    "@types/promise-sequential": "^1",
+    "@types/semver": "^7",
+    "@types/semver-compare": "^1",
+    "@types/source-map-support": "^0",
+    "@types/yaml": "^1",
+    "husky": "^7.0.0",
+    "pinst": "^2.0.0",
+    "prettier": "^2.5.1",
+    "source-map-support": "^0.5.21",
+    "typescript": "4.5.4"
+  },
+  "packageManager": "yarn@3.1.1",
+  "repository": {
+    "url": "https://github.com/voodooattack/kerneltool"
+  }
+}
