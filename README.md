@@ -2,9 +2,16 @@
 
 # Ubuntu Kernel Tool
 
-##### ULTIMATE DISCLAIMER: DO NOT USE THIS TOOL UNLESS YOU KNOW WHAT YOU'RE DOING. USE AT YOUR OWN RISK!
-
 A tool to list, download, and install mainline kernels from the Ubuntu [mainline repository](https://kernel.ubuntu.com/~kernel-ppa/mainline/).
+
+#### ULTIMATE DISCLAIMER: DO NOT USE THIS TOOL UNLESS YOU KNOW WHAT YOU'RE DOING. USE AT YOUR OWN RISK!
+
+As stated in the [Ubuntu Wiki](https://wiki.ubuntu.com/Kernel/MainlineBuilds):
+
+> *By default, Ubuntu systems run with the Ubuntu kernels provided by the Ubuntu repositories. However it is handy to be able to test with unmodified upstream kernels to help locate problems in Ubuntu kernel patches, or to confirm that upstream has fixed a specific issue. To this end we now offer select upstream kernel builds. These kernels are made from unmodified kernel source but using the Ubuntu kernel configuration files. These are then packaged as Ubuntu .deb files for simple installation, saving you the time of compiling kernels, and debugging build issues.*
+>
+> **These kernels are not supported and are not appropriate for production use.**
+
 
 ![Animated preview](./preview/kerneltool.webp)
 
@@ -89,7 +96,7 @@ P.S: *And yes! It's absolutely worth it. My steam games run so much faster and s
 
 All contributions are welcome. If you find a problem running it on your system and manage to fix it, please submit a PR.
 
-*P.S. Any PRs that touch [this line of code](./src/lib/repo.ts#101) will be rejected with extreme prejudice.*
+*P.S. Any PRs that touch [this line of code](./src/lib/repo.ts#L101) will be rejected with extreme prejudice.*
 
 ### License (MIT)
 
