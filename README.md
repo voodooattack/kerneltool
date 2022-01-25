@@ -40,7 +40,7 @@ Alternatively, invoke `sudo npm install -g kerneltool` to install it globally on
 ### Usage
 
 ```
-━━━ KernelTool - 1.0.0 ━━━ KernelTool for Ubuntu - 1.0.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━ KernelTool for Ubuntu - 1.0.1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   $ kerneltool <command>
 
@@ -52,7 +52,10 @@ Alternatively, invoke `sudo npm install -g kerneltool` to install it globally on
   kerneltool cache inspect
     Inspects the cache.
 
-  kerneltool download [--repo #0] [-v,--variant #0] [-a,--arch #0] [-o,--overwrite] <kernel> [output-directory]
+  kerneltool clone [--repo #0] [--git-repo #0] <kernel> <directory>
+    Clone the source code for a specific kernel version to a directory.
+
+  kerneltool download [--repo #0] [-v,--variant #0] [-a,--arch #0] [-o,--overwrite] <kernel> [directory]
     Download a specific kernel version to the cache. Will optionally copy the .deb packages to an output directory.
 
   kerneltool install [--repo #0] [-y,--yes] <kernel> [variant]
@@ -64,7 +67,7 @@ Alternatively, invoke `sudo npm install -g kerneltool` to install it globally on
   kerneltool show [--repo #0] [-j,--json] [-a,--arch #0] [--all] <kernel>
     Show the information for a specific kernel version.
 
-You can also print more details about any of these commands by calling them with
+You can also print more details about any of these commands by calling them with 
 the `-h,--help` flag right after the command name.
 ```
 

@@ -31,7 +31,7 @@ export class DownloadCommand extends BaseCommand {
   });
 
   kernelVersion = Option.String({ name: "kernel", required: true });
-  outputDir = Option.String({ name: "output-directory", required: false });
+  outputDir = Option.String({ name: "directory", required: false });
 
   kernelVariants = Option.Array("-v,--variant", {
     required: false,

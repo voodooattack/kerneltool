@@ -1,6 +1,6 @@
 {
   "name": "kerneltool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli to install ubuntu mainline kernels from the console.",
   "main": "./index.js",
   "bin": "./dist/cli.js",

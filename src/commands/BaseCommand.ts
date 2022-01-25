@@ -1,6 +1,6 @@
 import { Command, Option } from "clipanion";
 import { ListrTask, Listr } from "listr2";
-import { UBUNTU_MAINLINE_URL } from "../lib/config.js";
+import { UBUNTU_MAINLINE_URL, UBUNTU_MAINLINE_GIT } from "../lib/config.js";
 import { MainlineRepo } from "../lib/repo.js";
 import Enquirer from "enquirer";
 
@@ -9,6 +9,12 @@ export abstract class BaseCommand extends Command {
     required: false,
     description: `Override mainline kernel URL. Default is: ${UBUNTU_MAINLINE_URL}`
   });
+
+  constructor(options = { url: true }) {
+    super();
+    if (!options.url)
+      delete this.url;
+  }
 
   private _repo?: MainlineRepo;
 
@@ -19,7 +25,7 @@ export abstract class BaseCommand extends Command {
     return this._repo!;
   }
 
-  async task(): Promise<ListrTask | void> {}
+  async task(): Promise<ListrTask | ListrTask[] | void> {}
 
   override async execute(): Promise<number | void> {
     const task = await this.task();
